@@ -17,7 +17,7 @@ public class MonsterParts
 		
 	}
 	
-	public MonsterParts(String name, int eyes, int arms,int tentacles, boolean bloop)
+	public MonsterParts(String name, int eyes, int arms, double tentacles, boolean bloop)
 	{
 		this.name = name;
 		this.eyeCount = eyes;
@@ -27,10 +27,55 @@ public class MonsterParts
 		
 	}
 	
+	public String getName()
+	{
+		return name;
+	
+	}
+	public int getArmCount()
+	{
+		return armCount;
+	}
+	
+	public double  getTentacleAmount()
+	{
+		return tentacleAmount;
+		
+	}
+		public boolean hasBloop()
+		{
+			return hasBloop;
+		}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	public void setEyeCount(int eyeCount)
+	{
+		this.eyeCount = eyeCount;
+		
+	}
+	
+	public void setArmCount(int armCount)
+	{
+		this.armCount = armCount;
+		
+	}
+	public void setTentacleAmount(int tentacleAmount)
+	{
+		this.tentacleAmount = tentacleAmount;
+		
+	}
+	public void setHasBloop(boolean hasBloop)
+	{
+		this.hasBloop = hasBloop;
+		
+	}
+	
 	public String toString()
 	{
-		String  description  = "I am a Montster, my name is " + name +  ", I have " + eyeCount + "eyes and only" ;
-		description += tentacleAmount + " tentacles but I have " + armCount + "arms!" + hasBloop + "tells you if I hhave a bloop";
+		String  description  = "I am a Montster, my name is " + name +  ", I have " + eyeCount + " eyes and only " ;
+		description += tentacleAmount + " tentacles but I have " + armCount + " arms! " + hasBloop + " tells you if I have a bloop";
 		return description;
 	}
 }

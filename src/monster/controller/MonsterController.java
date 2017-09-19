@@ -8,7 +8,7 @@ public class MonsterController
 	{
 		MonsterParts basic = new MonsterParts();
 		System.out.println(basic);
-		MonsterParts fred = new MonsterParts("Silly Isaac Monster", 8 ,5 , 6.7, true);
+		MonsterParts fred = new MonsterParts("Silly Isaac Monster", 8 ,5 , 6, true);
 		System.out.println(fred);
 		System.out.println("Im hungry, Im going to eat one of Isaacs arms");
 		fred.setArmCount(fred.getArmCount() - 1);
@@ -31,7 +31,7 @@ public class MonsterController
 		{
 			System.out.println("Not hungry? too bad....");
 		}
-		else if (armEat < 0 / currentMonster.getArmCount() < armEat)
+		else if (armEat < 0)
 		{
 			System.out.println("Math is hard for you, you can't eat arms I dont have...");
 		}
@@ -40,7 +40,22 @@ public class MonsterController
 			
 			System.out.println("Ok, now I have this many arms " + currentMonster.getArmCount());
 		}
-		
+		System.out.println("How many tentacles are you interested in eating?, I have " + currentMonster.getTentacleAmount());
+		int tentacleEat = myScanner.nextInt();
+		currentMonster.setTentacleAmount(currentMonster.getTentacleAmount() - tentacleEat);
+		if(tentacleEat == 0)
+		{
+			System.out.println("Not hungry? too bad....");
+		}
+		else if (tentacleEat < 0)
+		{
+			System.out.println("Math is hard for you, you can't eat tentacles I dont have...");
+		}
+		else
+		{
+			
+			System.out.println("Ok, now I have this many arms " + currentMonster.getTentacleAmount());
+		}
 		myScanner.close(); 
 	}
 }

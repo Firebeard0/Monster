@@ -6,7 +6,7 @@ public class MonsterParts
 	private String name;
 	private int eyeCount;
 	private int armCount;
-	private int tentacleAmount;
+	private double tentacleAmount;
 	private boolean hasBloop;
 	
 	
@@ -40,7 +40,7 @@ public class MonsterParts
 	{
 		return eyeCount;
 	}
-	public int  getTentacleAmount()
+	public double  getTentacleAmount()
 	{
 		return tentacleAmount;
 		
@@ -64,7 +64,7 @@ public class MonsterParts
 		this.armCount = armCount;
 		
 	}
-	public void setTentacleAmount(int tentacleAmount)
+	public void setTentacleAmount(double tentacleAmount)
 	{
 		this.tentacleAmount = tentacleAmount;
 		

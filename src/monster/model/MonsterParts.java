@@ -36,7 +36,10 @@ public class MonsterParts
 	{
 		return armCount;
 	}
-	
+	public int getEyeCount()
+	{
+		return eyeCount;
+	}
 	public double  getTentacleAmount()
 	{
 		return tentacleAmount;

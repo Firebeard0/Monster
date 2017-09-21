@@ -16,6 +16,7 @@ public class MonsterController
 	{
 		MonsterParts basic = new MonsterParts();
 		System.out.println(basic);
+		popup.displayText(basic.toString());
 		MonsterParts fred = new MonsterParts("Silly Isaac Monster", 8 ,5 , 6, true);
 		System.out.println(fred);
 		System.out.println("Im hungry, Im going to eat one of Isaacs arms");

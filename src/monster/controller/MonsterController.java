@@ -1,8 +1,16 @@
 package monster.controller;
 import monster.model.MonsterParts;
+import monster.view.MonsterDisplayy;
+
 import java.util.Scanner;
 public class MonsterController
 {
+	private MonsterDisplayy popup;
+	
+	public MonsterController()
+	{
+		popup = new MonsterDisplayy();
+	}
 	
 	public void start()
 	{
@@ -56,6 +64,8 @@ public class MonsterController
 			
 			System.out.println("Ok, now I have this many arms " + currentMonster.getTentacleAmount());
 		}
+		
+		popup.displayText("Hi there,  are you ready to play?");
 		myScanner.close(); 
 	}
 }

@@ -19,6 +19,7 @@ public class MonsterParts
 	
 	public MonsterParts(String name, int eyes, int arms, int tentacles, boolean bloop)
 	{
+		//  declares all variables
 		this.name = name;
 		this.eyeCount = eyes;
 		this.armCount =  arms;

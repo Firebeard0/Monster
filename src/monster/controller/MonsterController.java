@@ -16,10 +16,14 @@ public class MonsterController
 	{
 		
 		int count = 0;
-		while(count < 10)
+//		while(count < 10)
+//		{
+//			popup.displayText("I'm the coolest!!!");
+//			count += 1;
+//		}
+		for (int loop = 0; loop < 10; loop +=1)
 		{
-			popup.displayText("I'm the coolest!!!");
-			count += 1;
+			popup.displayText("this is loop #" + (loop + 1) + "of ten" );
 		}
 		MonsterParts basic = new MonsterParts();
 //		System.out.println(basic);

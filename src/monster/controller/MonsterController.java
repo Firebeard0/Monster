@@ -21,10 +21,11 @@ public class MonsterController
 //			popup.displayText("I'm the coolest!!!");
 //			count += 1;
 //		}
-		for (int loop = 0; loop < 10; loop +=1)
-		{
-			popup.displayText("this is loop #" + (loop + 1) + "of ten" );
-		}
+//		for (int loop = 0; loop < 10; loop +=1)
+//		{
+//			popup.displayText("this is loop #" + (loop + 1) + " of ten" );
+//		}
+		
 		MonsterParts basic = new MonsterParts();
 //		System.out.println(basic);
 		popup.displayText(basic.toString());
@@ -44,11 +45,16 @@ public class MonsterController
 		int consumed = 0;
 		String response = popup.getResponse(currentMonster.getName() + "wants to know how many eyes you want to eat, please type in how many.");
 		
-		if(isValidInteger(response))
-			
+		while(!isValidInteger(response))
 		{
-			consumed = Integer.parseInt(response);
+			popup.displayText("type a better answer");
+			response = popup.getResponse("Type an integer value!");
 		}
+//		if(isValidInteger(response))
+//			
+//		{
+//			consumed = Integer.parseInt(response);
+//		}
 		consumed = Integer.parseInt(response);
 //		System.out.println(currentMonster.getName() + " wants to know how many eyes you want to eat, please type in how many.");
 		popup.displayText(currentMonster.getName() + " wants to know how many eyes you want to eat, please type in how many.");
@@ -77,6 +83,10 @@ public class MonsterController
 //			System.out.println("Ok, now I have this many arms " + currentMonster.getArmCount());
 			popup.displayText("Ok, now I have this many arms " + currentMonster.getArmCount());
 		}
+		//while (!isVaidInteger(armEat))
+		//{
+			
+//		}
 //		System.out.println("How many tentacles are you interested in eating?, I have " + currentMonster.getTentacleAmount());
 		popup.getResponse("How many tentacles are you interested in eating?, I have " + currentMonster.getTentacleAmount());
 		double tentacleEat = myScanner.nextDouble();

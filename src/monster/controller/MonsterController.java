@@ -14,6 +14,12 @@ public class MonsterController
 	
 	public void start()
 	{
+		
+		int count = 0;
+		while(count < 10)
+		{
+			popup.displayText("I'm the coolest!!!");
+		}
 		MonsterParts basic = new MonsterParts();
 //		System.out.println(basic);
 		popup.displayText(basic.toString());

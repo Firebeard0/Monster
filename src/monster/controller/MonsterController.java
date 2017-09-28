@@ -1,21 +1,26 @@
 package monster.controller;
 import monster.model.MonsterParts;
 import monster.view.MonsterDisplayy;
-
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class MonsterController
 {
 	private MonsterDisplayy popup;
+	private List<MonsterParts> monsterList;
+	
 	
 	public MonsterController()
 	{
 		popup = new MonsterDisplayy();
+		monsterList = new ArrayList<MonsterParts>();
+		
 	}
 	
 	public void start()
 	{
 		
-		int count = 0;
+//		int count = 0;
 //		while(count < 10)
 //		{
 //			popup.displayText("I'm the coolest!!!");
@@ -37,8 +42,27 @@ public class MonsterController
 		fred.setArmCount(fred.getArmCount() - 1);
 //		System.out.println(fred);
 		popup.displayText(fred.toString());
+		
+		monsterList.add(basic);
+		monsterList.add(fred);
 		interactWithMonster(fred);
 		}
+	
+	private void useList()
+	{
+		for (int index = 0; index < monsterList.size(); index++)
+		{
+			MonsterParts currentMonster = monsterList.get(index);
+			popup.displayText(currentMonster.getName());
+			String updateName = popup.getResponse("what should my name be?");
+			popup.displayText("my new name is " + currentMonster.getName());
+		}
+		
+		for (MonsterParts current : monsterList)
+		{
+			
+		}
+	}
 	private void interactWithMonster(MonsterParts currentMonster)
 	{
 		Scanner myScanner = new Scanner(System.in);
